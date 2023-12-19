@@ -13,14 +13,43 @@ namespace MadLibs.Controllers
         }
 
 
-        [HttpGet("/game/new")]
-        public ActionResult CreateForm()
+        [HttpGet("/game/new-myself")]
+        public ActionResult CreateFormSelf()
         {
+            
+            return View();
+        }
+
+        [HttpGet("/game/new-mydog")]
+        public ActionResult CreateFormDog()
+        {
+            
+            return View();
+        }
+
+        [HttpGet("/game/new-myfather")]
+        public ActionResult CreateFormFather()
+        {
+            
             return View();
         }
         
-        [HttpPost("/game/story")]
-        public ActionResult Story(string myNoun, string myVerb, string myAdjective, string myAdverb, string myExclammation)
+        [HttpPost("/game/selfStory")]
+        public ActionResult MyselfStory(string myNoun, string myVerb, string myAdjective, string myAdverb, string myExclammation)
+        {
+            MyMadLibs newMadLib = new MyMadLibs(myNoun, myVerb, myAdjective, myAdverb, myExclammation);
+            return View(newMadLib);
+        }
+
+        [HttpPost("/game/dogStory")]
+        public ActionResult MydogStory(string myNoun, string myVerb, string myAdjective, string myAdverb, string myExclammation)
+        {
+            MyMadLibs newMadLib = new MyMadLibs(myNoun, myVerb, myAdjective, myAdverb, myExclammation);
+            return View(newMadLib);
+        }
+
+        [HttpPost("/game/fatherStory")]
+        public ActionResult MyFatherStory(string myNoun, string myVerb, string myAdjective, string myAdverb, string myExclammation)
         {
             MyMadLibs newMadLib = new MyMadLibs(myNoun, myVerb, myAdjective, myAdverb, myExclammation);
             return View(newMadLib);
