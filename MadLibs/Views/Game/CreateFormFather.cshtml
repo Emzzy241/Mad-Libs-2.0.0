@@ -14,20 +14,21 @@
       crossorigin="anonymous">
   </head>
   <body>
+  <div class="container">
     <h1>My MadLib Application</h1>
     <br>
     <p>Fill in the following.</p>
 
     
-    <form action="/game/story" method="post">
+    <form action="/game/fatherStory" method="post">
 
         <label for="myNoun">Enter a noun name</label>
-        <input id="myNoun" name="myNoun" type="text" required placeholder="e.g: bola">
+        <input id="myNoun" name="myNoun" type="text" required placeholder="e.g: Andrew">
 
         <br>
         <br>
         <label for="myVerb">Enter a verb</label>
-        <input id="myVerb" name="myVerb" type="text" required placeholder="e.g: run">
+        <input id="myVerb" name="myVerb" type="text" required placeholder="e.g: fun">
 
         <br>
         <br>
@@ -48,5 +49,6 @@
         <br>
       <button class="btn btn-secondary" type="submit">Submit</button>
     </form>
+    </div>
   </body>
 </html>
